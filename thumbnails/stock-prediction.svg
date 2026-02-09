@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#0a0f1e"/>
+    </linearGradient>
+    <linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a90d9" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#4a90d9" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="predFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5bb5a6" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#5bb5a6" stop-opacity="0.02"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)" rx="12"/>
+  <!-- Grid -->
+  <g stroke="#1e2a4a" stroke-width="0.5" opacity="0.5">
+    <line x1="60" y1="50" x2="60" y2="380"/>
+    <line x1="60" y1="380" x2="760" y2="380"/>
+    <line x1="60" y1="305" x2="760" y2="305" stroke-dasharray="4"/>
+    <line x1="60" y1="230" x2="760" y2="230" stroke-dasharray="4"/>
+    <line x1="60" y1="155" x2="760" y2="155" stroke-dasharray="4"/>
+    <line x1="60" y1="80" x2="760" y2="80" stroke-dasharray="4"/>
+  </g>
+  <!-- Title -->
+  <text x="400" y="30" fill="#e0e8f0" font-size="16" font-weight="bold" text-anchor="middle" font-family="sans-serif">Actual vs Predicted Stock Price (R&#178; = 0.88)</text>
+  <!-- Actual price line -->
+  <path d="M60,300 L120,280 L180,310 L240,260 L300,230 L360,200 L420,220 L480,170 L510,150 L540,130 L570,145"
+        stroke="#4a90d9" stroke-width="2.5" fill="none"/>
+  <path d="M60,300 L120,280 L180,310 L240,260 L300,230 L360,200 L420,220 L480,170 L510,150 L540,130 L570,145 L570,380 L60,380 Z"
+        fill="url(#areaFill)"/>
+  <!-- Prediction line (dashed, starts mid-chart) -->
+  <path d="M420,225 L480,175 L510,155 L540,125 L570,140 L620,110 L680,90 L740,75"
+        stroke="#5bb5a6" stroke-width="2.5" fill="none" stroke-dasharray="8,4"/>
+  <path d="M570,145 L620,110 L680,90 L740,75 L740,380 L570,380 Z"
+        fill="url(#predFill)"/>
+  <!-- Divider line -->
+  <line x1="570" y1="50" x2="570" y2="380" stroke="#ffd700" stroke-width="1" stroke-dasharray="6" opacity="0.5"/>
+  <text x="570" y="45" fill="#ffd700" font-size="11" text-anchor="middle" font-family="sans-serif">Forecast</text>
+  <!-- Legend -->
+  <line x1="100" y1="420" x2="130" y2="420" stroke="#4a90d9" stroke-width="2.5"/>
+  <text x="138" y="424" fill="#8a9ab0" font-size="12" font-family="sans-serif">Actual</text>
+  <line x1="220" y1="420" x2="250" y2="420" stroke="#5bb5a6" stroke-width="2.5" stroke-dasharray="8,4"/>
+  <text x="258" y="424" fill="#8a9ab0" font-size="12" font-family="sans-serif">Predicted</text>
+  <!-- Accuracy badge -->
+  <rect x="590" y="410" width="170" height="28" rx="14" fill="#1e3a2a" stroke="#5bb5a6" stroke-width="1"/>
+  <text x="675" y="429" fill="#5bb5a6" font-size="13" text-anchor="middle" font-weight="bold" font-family="sans-serif">94% Accuracy</text>
+  <!-- Data points -->
+  <circle cx="480" cy="170" r="4" fill="#4a90d9"/>
+  <circle cx="510" cy="150" r="4" fill="#4a90d9"/>
+  <circle cx="540" cy="130" r="4" fill="#4a90d9"/>
+  <circle cx="570" cy="145" r="4" fill="#4a90d9"/>
+  <circle cx="620" cy="110" r="4" fill="#5bb5a6"/>
+  <circle cx="680" cy="90" r="4" fill="#5bb5a6"/>
+  <circle cx="740" cy="75" r="4" fill="#5bb5a6"/>
+</svg>

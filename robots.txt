@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://yogasundaram95.github.io/yogasundaramramaswamy/sitemap.xml
