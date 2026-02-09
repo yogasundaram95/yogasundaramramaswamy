@@ -1,0 +1,1 @@
+import{r as t}from"./index-DKNagi7v.js";const o=(s={})=>{const[n,u]=t.useState(!1),e=t.useRef(null);return t.useEffect(()=>{const r=new IntersectionObserver(([c])=>{c.isIntersecting&&(u(!0),e.current&&r.unobserve(e.current))},{threshold:.1,...s});return e.current&&r.observe(e.current),()=>{e.current&&r.unobserve(e.current)}},[s]),{ref:e,isVisible:n}};export{o as u};
