@@ -47,7 +47,7 @@ const Hero = () => {
               className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-8 animate-fade-up opacity-0"
               style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}
             >
-              Business Intelligence Engineer
+              GTM Engineer
             </p>
 
             {/* Description */}
@@ -55,7 +55,7 @@ const Hero = () => {
               className="text-muted-foreground max-w-xl text-base md:text-lg leading-relaxed mb-6 animate-fade-up opacity-0"
               style={{ animationDelay: "0.8s", animationFillMode: "forwards" }}
             >
-              BI Engineer with 6+ years building advanced SQL and Amazon Redshift transformations, ETL pipelines, dimensional data models, and automated reporting across Amazon-scale operational datasets.
+              GTM Engineer with 6+ years of experience building revenue systems, automation workflows, and analytics infrastructure across SaaS and enterprise environments. Experienced in designing outbound orchestration, lead enrichment, funnel analytics, and AI-powered workflows using Python, Snowflake, dbt, Salesforce, Clay, and modern GTM tooling.
             </p>
 
             {/* Stat chips */}
@@ -64,9 +64,9 @@ const Hero = () => {
               style={{ animationDelay: "0.9s", animationFillMode: "forwards" }}
             >
               {[
-                { value: "6+", label: "years BI experience" },
-                { value: "40%", label: "efficiency gain" },
-                { value: "99%+", label: "accuracy" },
+                { value: "28%", label: "campaign engagement ↑" },
+                { value: "31%", label: "free-to-paid conversion ↑" },
+                { value: "45%", label: "operational effort ↓" },
               ].map((stat) => (
                 <div
                   key={stat.label}

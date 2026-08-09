@@ -1,22 +1,30 @@
 export const skillCategories = [
   {
-    title: "SQL & Warehousing",
-    skills: ["Advanced SQL", "Amazon Redshift", "MySQL", "SQL Server", "Snowflake", "Oracle", "Dimensional Modeling", "Star Schema", "ETL/ELT Pipelines", "dbt"],
+    title: "CRM, GTM & Revenue Operations Platforms",
+    skills: ["Salesforce", "HubSpot", "Apollo.io", "6sense", "Clay", "GTM Orchestration", "Account Scoring", "Marketo", "Stripe", "HubSpot API"],
   },
   {
-    title: "BI & Visualization",
-    skills: ["Amazon QuickSight", "Tableau", "Power BI", "Advanced Excel", "Executive Scorecards", "WBR/QBR Reporting", "Self-Service Dashboards"],
+    title: "Workflow Automation, APIs & Data Quality",
+    skills: ["n8n", "FastAPI", "REST APIs", "Zapier", "Great Expectations", "Power Automate", "Webhook Logging", "ETL Automation", "Data Validation", "QA Frameworks"],
   },
   {
-    title: "Programming & Statistics",
-    skills: ["Python", "R (tidyverse)", "VBA", "Statistical Analysis", "Time-Series", "Regression"],
+    title: "AI, Machine Learning & Analytics",
+    skills: ["Scikit-learn", "PySpark", "LangGraph", "LangSmith", "RAG", "Behavioral Clustering", "Predictive Lead Scoring", "Funnel Analytics", "Retention Analysis", "Customer Segmentation", "LTV Analysis", "Forecasting Models", "Experimentation & A/B Testing"],
   },
   {
-    title: "Cloud & DevOps",
-    skills: ["AWS (Redshift, S3, EC2, Lambda)", "Azure Fabric", "Git"],
+    title: "Programming, Query & Analytical Languages",
+    skills: ["Python", "SQL", "T-SQL", "VBA", "DAX", "SPSS"],
   },
   {
-    title: "AI & Data Quality",
-    skills: ["LLM-Assisted Analytics", "Anomaly Detection", "Metric Validation", "Data Governance", "Power Automate"],
+    title: "Cloud, Data Engineering & Warehousing",
+    skills: ["Snowflake", "BigQuery", "Amazon Redshift", "AWS Glue", "Amazon S3", "dbt", "Apache Kafka", "Apache Airflow", "SSIS", "Informatica", "Fivetran", "Segment", "Revenue Data Layer", "Terraform"],
+  },
+  {
+    title: "Business Intelligence & Product Analytics",
+    skills: ["Tableau", "Looker", "QlikView", "Amazon QuickSight", "Amplitude", "Statsig"],
+  },
+  {
+    title: "Databases, Enterprise Systems & Collaboration Tools",
+    skills: ["MySQL", "SAP HANA", "Git", "GitHub", "JIRA"],
   },
 ];
