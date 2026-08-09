@@ -83,11 +83,25 @@ const Hero = () => {
               className="flex flex-wrap gap-4 animate-fade-up opacity-0"
               style={{ animationDelay: "1s", animationFillMode: "forwards" }}
             >
-              <Button variant="hero" size="lg" asChild>
-                <a href="#projects">View My Work</a>
+              <Button
+                variant="hero"
+                size="lg"
+                onClick={() => {
+                  const element = document.getElementById('projects');
+                  element?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                View My Work
               </Button>
-              <Button variant="glow" size="lg" asChild>
-                <a href="#contact">Get In Touch</a>
+              <Button
+                variant="glow"
+                size="lg"
+                onClick={() => {
+                  const element = document.getElementById('contact');
+                  element?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                Get In Touch
               </Button>
             </div>
           </div>
@@ -122,17 +136,20 @@ const Hero = () => {
       </div>
       
       {/* Scroll indicator */}
-      <div 
+      <div
         className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-fade-in opacity-0"
         style={{ animationDelay: "1.5s", animationFillMode: "forwards" }}
       >
-        <a 
-          href="#about" 
-          className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+        <button
+          onClick={() => {
+            const element = document.getElementById('about');
+            element?.scrollIntoView({ behavior: 'smooth' });
+          }}
+          className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors cursor-pointer bg-transparent border-none p-0"
         >
           <span className="text-sm tracking-widest uppercase">Scroll</span>
           <ArrowDown className="w-5 h-5 animate-float" />
-        </a>
+        </button>
       </div>
     </section>
   );
