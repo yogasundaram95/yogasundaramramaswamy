@@ -29,9 +29,9 @@ const Contact = () => {
           {/* CTA Buttons */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Button variant="red" size="xl" asChild>
-              <a href="mailto:yogasundaramramaswamy@gmail.com">
+              <a href="mailto:Yoga.Sundaram@outlook.com">
                 <Mail className="w-5 h-5" />
-                yogasundaramramaswamy@gmail.com
+                Yoga.Sundaram@outlook.com
               </a>
             </Button>
             <Button variant="glow" size="xl" asChild>
