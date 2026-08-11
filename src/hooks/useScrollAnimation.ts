@@ -5,12 +5,12 @@ export const useScrollAnimation = (options = {}) => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const element = ref.current;
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         setIsVisible(true);
-        // Once visible, stop observing
-        if (ref.current) {
-          observer.unobserve(ref.current);
+        if (element) {
+          observer.unobserve(element);
         }
       }
     }, {
@@ -18,13 +18,13 @@ export const useScrollAnimation = (options = {}) => {
       ...options,
     });
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    if (element) {
+      observer.observe(element);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (element) {
+        observer.unobserve(element);
       }
     };
   }, [options]);

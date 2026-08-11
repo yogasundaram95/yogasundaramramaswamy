@@ -60,25 +60,48 @@
   }
 
   .dark {
-    --background: 220 20% 7%;
-    --foreground: 45 20% 95%;
-    --card: 220 18% 10%;
-    --card-foreground: 45 20% 95%;
-    --popover: 220 18% 10%;
-    --popover-foreground: 45 20% 95%;
-    --primary: 38 92% 55%;
-    --primary-foreground: 220 20% 7%;
-    --secondary: 220 15% 15%;
-    --secondary-foreground: 45 20% 95%;
-    --muted: 220 15% 18%;
-    --muted-foreground: 220 10% 55%;
-    --accent: 38 92% 55%;
-    --accent-foreground: 220 20% 7%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 220 15% 18%;
-    --input: 220 15% 18%;
-    --ring: 38 92% 55%;
+    color-scheme: dark;
+  }
+
+  .light,
+  [data-theme="light"] {
+    color-scheme: light;
+    --background: 210 38% 97%;
+    --foreground: 222 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 30% 15%;
+
+    --primary: 215 100% 46%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 213 34% 91%;
+    --secondary-foreground: 222 30% 15%;
+
+    --muted: 212 32% 91%;
+    --muted-foreground: 220 18% 34%;
+
+    --accent: 0 82% 57%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 74% 46%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 28% 82%;
+    --input: 214 28% 88%;
+    --ring: 215 100% 46%;
+
+    --gradient-gold: hsl(215 100% 46%);
+    --color-red: hsl(0 82% 57%);
+    --color-white: hsl(0 0% 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(210 45% 97%), hsl(214 42% 91%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(214 45% 95%));
+
+    --shadow-glow: 0 18px 50px hsl(215 100% 46% / 0.18);
+    --shadow-card: 0 18px 42px hsl(220 35% 30% / 0.12);
   }
 }
 
@@ -91,7 +114,8 @@
     @apply bg-background;
     font-family: var(--font-body);
     font-size: 18px;
-    color: hsl(210, 30%, 85%);
+    color: hsl(var(--foreground));
+    transition: background-color 300ms ease, color 300ms ease;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -110,6 +134,10 @@
 @layer utilities {
   .text-gradient {
     color: hsl(210 100% 85%) !important;
+  }
+
+  [data-theme="light"] .text-gradient {
+    color: hsl(214 84% 38%) !important;
   }
 
   .text-usa-red {
@@ -191,6 +219,11 @@
     background-size: 200px 200px;
     background-repeat: repeat;
     animation: twinkle 4s ease-in-out infinite;
+  }
+
+  [data-theme="light"] .stars-bg {
+    opacity: 0.2;
+    filter: invert(1) opacity(0.45);
   }
 
   .animate-fade-up {

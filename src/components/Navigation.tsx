@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
+import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -50,6 +51,7 @@ const Navigation = () => {
                 {link.label}
               </a>
             ))}
+            <ThemeToggle />
             <Button variant="glow" size="sm" asChild>
               <a href="#contact">Hire Me</a>
             </Button>
@@ -84,6 +86,9 @@ const Navigation = () => {
                   Hire Me
                 </a>
               </Button>
+              <div className="pt-2">
+                <ThemeToggle />
+              </div>
             </div>
           </div>
         )}
