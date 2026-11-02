@@ -18,28 +18,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build
-        run: npm run build
+      - name: Prepare an empty Pages deployment
+        run: |
+          mkdir -p offline
+          printf '<!doctype html><title>Not Found</title><h1>404</h1>\n' > offline/404.html
+          touch offline/.nojekyll
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      - name: Upload artifact
+      - name: Upload empty site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: './offline'
 
   deploy:
     needs: build
@@ -48,6 +39,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy empty site to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
